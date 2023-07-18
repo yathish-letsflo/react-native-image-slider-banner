@@ -221,7 +221,7 @@ export const ImageSlider = ({
                                 >
                                     <Image
                                         // @ts-ignore
-                                        source={localImg ? item.img : { uri: item.img }}
+                                        source={localImg ? item.img : { uri: item.img,headers:item.headers }}
                                         style={[styles.caroselImageStyle, caroselImageStyle,]}
                                     />
                                 </TouchableOpacity>
