@@ -161,7 +161,7 @@ export const ImageSlider = ({
                                 <TouchableOpacity onPress={() => {
                                     setSelectedIndex(index)
                                     setImageViewer(!imageViewer)
-                                }} style={{ position: 'absolute', top: Os == "ios" ? 100 : 5, left: 10 }}>
+                                }} style={{ position: 'absolute', top: Os == "ios" ? 100 : 5, left: 10, zIndex: 10 }}>
                                     <Icon onPress={() => setImageViewer(!imageViewer)} name="close" size={34} color={closeIconColor} />
                                 </TouchableOpacity>
                                <Animated.ScrollView
