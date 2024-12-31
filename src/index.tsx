@@ -164,11 +164,16 @@ export const ImageSlider = ({
                                 }} style={{ position: 'absolute', top: Os == "ios" ? 100 : 5, left: 10 }}>
                                     <Icon onPress={() => setImageViewer(!imageViewer)} name="close" size={34} color={closeIconColor} />
                                 </TouchableOpacity>
-                                <Image
-                                    // @ts-ignore
-                                    source={localImg ? item.img : { uri: item.img }}
-                                    style={[styles.previewImageStyle, previewImageStyle]}
-                                />
+                               <Animated.ScrollView
+                                    maximumZoomScale={2}
+                                    contentContainerStyle={{ top: 150 }}
+                                >
+                                    <Image
+                                        // @ts-ignore
+                                        source={localImg ? item.img : { uri: item.img }}
+                                        style={[styles.previewImageStyle, previewImageStyle]}
+                                    />
+                                </Animated.ScrollView>
                             </View>
                         )
                     }}
